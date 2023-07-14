@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@+id/navigation"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            app:startDestination="@id/MainFragment"><![CDATA[
+            android:id="@+id/navigation">
+
+    ]]>
+    <fragment android:id="@+id/EditScreenFragment"
+              android:name="ui.assignments.a4notes.ui.EditScreenFragment"
+              android:label="fragment_edit_screen"
+              tools:layout="@layout/fragment_edit_screen"/>
+    <fragment android:id="@+id/MainFragment"
+              android:name="ui.assignments.a4notes.ui.MainFragment"
+              tools:layout="@layout/fragment_main"
+              android:label="fragment_main">
+        <action android:id="@+id/action_MainFragment_to_EditScreenFragment" app:destination="@id/EditScreenFragment"/>
+        <action android:id="@+id/action_MainFragment_to_addScreenFragment" app:destination="@id/addScreenFragment"/>
+    </fragment>
+    <fragment android:id="@+id/addScreenFragment" android:name="ui.assignments.a4notes.ui.AddScreenFragment"
+              android:label="fragment_add_screen" tools:layout="@layout/fragment_add_screen">
+        <action android:id="@+id/action_addScreenFragment_to_MainFragment" app:destination="@id/MainFragment"/>
+    </fragment>
+
+</navigation>
